@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hamza.glass"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <application
+        android:label="Glass"
+        android:icon="@drawable/icon"
+        android:banner="@drawable/banner"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen">
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout|uiMode|density">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
